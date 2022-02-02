@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Threading;
-using System.Diagnostics;
 using System.IO;
+using System.Windows.Forms;
 
 namespace BankingApp
 {
     public partial class Login : Form
     {
+
+        int currentAccountNum = 23256612; //Placeholder for testing, remove default account number later
+        int inputPin;
+        bool loggedIn = false; 
 
         public dbConnector accountsDbConnection = new dbConnector(@"accounts.db");
 
@@ -36,6 +32,12 @@ namespace BankingApp
         {
             DataTable accountsDT = accountsDbConnection.FetchMessageDataFromTable();
             dataGridView1.DataSource = accountsDT;
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            accountDetails accountDetails = new accountDetails();
+            accountDetails.Show();
         }
     }
 }
