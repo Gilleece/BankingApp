@@ -6,11 +6,7 @@ using System.Windows.Forms;
 namespace BankingApp
 {
     public partial class Login : Form
-    {
-
-        string currentAccountNum; //Placeholder for testing, remove default account number later
-        int inputPin;
-        bool loggedIn = false; 
+    {       
 
         public dbConnector accountsDbConnection = new dbConnector(@"accounts.db");
 
@@ -19,19 +15,13 @@ namespace BankingApp
             if (File.Exists("accounts.db"))
             {
                 InitializeComponent();
-                getAccounts();
+                pinInput.PasswordChar = '*';
             }
             else
             {
                 var confirmUpdate = MessageBox.Show("The database is missing.",
                                      "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void getAccounts()
-        {
-            DataTable accountsDT = accountsDbConnection.FetchMessageDataFromTable();
-            dataGridView1.DataSource = accountsDT;
         }
 
         public void verifyLogin()
@@ -47,10 +37,11 @@ namespace BankingApp
             }
             else
             {
-                string loggedInAccount = currentAccountNum.ToString();
-                accountDetails accountDetails = new accountDetails(loggedInAccount);
+                accountDetails accountDetails = new accountDetails(accountInput.Text);
                 MessageBox.Show("Successfully logged in!",
                                      "Details Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                accountInput.Text = "";
+                pinInput.Text = "";
                 accountDetails.Show();
             }            
         } 
@@ -63,7 +54,6 @@ namespace BankingApp
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            currentAccountNum = accountInput.Text.ToString();
             verifyLogin();
         }
     }
