@@ -15,14 +15,14 @@ namespace BankingApp
 {
     public partial class accountDetails : Form
     {
-        public accountDetails()
+        public accountDetails(string loggedInAccount)
         {
             InitializeComponent();
+            accNumBox.Text = loggedInAccount;
         }
 
         private void acccountDetails_Load(object sender, EventArgs e)
-        {
-
+        {           
         }
     }
 }

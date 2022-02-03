@@ -8,7 +8,7 @@ namespace BankingApp
     public partial class Login : Form
     {
 
-        int currentAccountNum = 23256612; //Placeholder for testing, remove default account number later
+        string currentAccountNum; //Placeholder for testing, remove default account number later
         int inputPin;
         bool loggedIn = false; 
 
@@ -34,10 +34,37 @@ namespace BankingApp
             dataGridView1.DataSource = accountsDT;
         }
 
+        public void verifyLogin()
+        {
+            if (accountInput.Text == "" || pinInput.Text == "")
+            {
+                MessageBox.Show("Please enter an account number and PIN.",
+                                     "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } else if (checkLoginDetails() == false)
+            {
+                MessageBox.Show("Incorrect Account Number or PIN. Please try again.",
+                                     "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string loggedInAccount = currentAccountNum.ToString();
+                accountDetails accountDetails = new accountDetails(loggedInAccount);
+                MessageBox.Show("Successfully logged in!",
+                                     "Details Confirmed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                accountDetails.Show();
+            }            
+        } 
+
+        private bool checkLoginDetails()
+        {
+            bool isValid = accountsDbConnection.checkCredentials(accountInput.Text, pinInput.Text);
+            return isValid;
+        }
+
         private void loginButton_Click(object sender, EventArgs e)
         {
-            accountDetails accountDetails = new accountDetails();
-            accountDetails.Show();
+            currentAccountNum = accountInput.Text.ToString();
+            verifyLogin();
         }
     }
 }
