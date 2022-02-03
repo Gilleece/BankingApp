@@ -49,7 +49,7 @@
             // 
             this.nameLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(167, 503);
+            this.nameLabel.Location = new System.Drawing.Point(169, 503);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(185, 29);
             this.nameLabel.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             this.accNumLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.accNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accNumLabel.Location = new System.Drawing.Point(167, 544);
+            this.accNumLabel.Location = new System.Drawing.Point(169, 544);
             this.accNumLabel.Name = "accNumLabel";
             this.accNumLabel.Size = new System.Drawing.Size(185, 29);
             this.accNumLabel.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.ibanLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ibanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibanLabel.Location = new System.Drawing.Point(167, 586);
+            this.ibanLabel.Location = new System.Drawing.Point(169, 586);
             this.ibanLabel.Name = "ibanLabel";
             this.ibanLabel.Size = new System.Drawing.Size(185, 29);
             this.ibanLabel.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.eircodeLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.eircodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eircodeLabel.Location = new System.Drawing.Point(167, 626);
+            this.eircodeLabel.Location = new System.Drawing.Point(169, 626);
             this.eircodeLabel.Name = "eircodeLabel";
             this.eircodeLabel.Size = new System.Drawing.Size(185, 29);
             this.eircodeLabel.TabIndex = 3;
@@ -92,7 +92,7 @@
             // nameBox
             // 
             this.nameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameBox.Location = new System.Drawing.Point(360, 503);
+            this.nameBox.Location = new System.Drawing.Point(362, 503);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(185, 29);
             this.nameBox.TabIndex = 4;
@@ -100,7 +100,7 @@
             // accNumBox
             // 
             this.accNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accNumBox.Location = new System.Drawing.Point(360, 544);
+            this.accNumBox.Location = new System.Drawing.Point(362, 544);
             this.accNumBox.Name = "accNumBox";
             this.accNumBox.Size = new System.Drawing.Size(185, 29);
             this.accNumBox.TabIndex = 5;
@@ -108,7 +108,7 @@
             // ibanBox
             // 
             this.ibanBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibanBox.Location = new System.Drawing.Point(360, 587);
+            this.ibanBox.Location = new System.Drawing.Point(362, 587);
             this.ibanBox.Name = "ibanBox";
             this.ibanBox.Size = new System.Drawing.Size(185, 29);
             this.ibanBox.TabIndex = 6;
@@ -116,7 +116,7 @@
             // eircodeBox
             // 
             this.eircodeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eircodeBox.Location = new System.Drawing.Point(360, 626);
+            this.eircodeBox.Location = new System.Drawing.Point(362, 626);
             this.eircodeBox.Name = "eircodeBox";
             this.eircodeBox.Size = new System.Drawing.Size(185, 29);
             this.eircodeBox.TabIndex = 7;
@@ -125,7 +125,7 @@
             // 
             this.balanceLabel.BackColor = System.Drawing.Color.PaleGreen;
             this.balanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.balanceLabel.Location = new System.Drawing.Point(166, 421);
+            this.balanceLabel.Location = new System.Drawing.Point(168, 421);
             this.balanceLabel.Name = "balanceLabel";
             this.balanceLabel.Size = new System.Drawing.Size(186, 33);
             this.balanceLabel.TabIndex = 8;
@@ -137,7 +137,7 @@
             this.balanceBox.BackColor = System.Drawing.Color.LightGreen;
             this.balanceBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.balanceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.balanceBox.Location = new System.Drawing.Point(360, 421);
+            this.balanceBox.Location = new System.Drawing.Point(362, 421);
             this.balanceBox.Name = "balanceBox";
             this.balanceBox.Size = new System.Drawing.Size(185, 33);
             this.balanceBox.TabIndex = 9;
@@ -167,12 +167,12 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(422, 351);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(490, 346);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 29);
+            this.label1.Size = new System.Drawing.Size(55, 40);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Update PIN";
+            this.label1.Text = "PIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editPinBtn
