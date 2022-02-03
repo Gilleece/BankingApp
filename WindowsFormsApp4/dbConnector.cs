@@ -116,6 +116,45 @@ namespace BankingApp
             sqlconnConnection.Close();
 
         }
+
+        public DataTable getAccountDetails(string accNum)
+        {
+            try
+            {
+                DataTable dtAccountDetails = new DataTable();
+                sqlconnConnection.Open();
+                string strQuery = @"SELECT * FROM accounts WHERE accountNo = @accNum;";  // example of a Paramaterised SQL statement.
+                SQLiteCommand sqlcomCommand = new SQLiteCommand(strQuery, sqlconnConnection);
+                sqlcomCommand.Parameters.AddWithValue("@accNum", accNum);
+                //sqlcomCommand.Parameters.AddWithValue("@mysenderguid", strSenderGuid); // passing parameters into the SQL command
+                SQLiteDataAdapter sqldatadptAdapter = new SQLiteDataAdapter(sqlcomCommand);  // local SQL data Adaptor
+
+
+                try
+                {
+                    sqldatadptAdapter.Fill(dtAccountDetails);
+                    return dtAccountDetails;
+                }
+                catch (Exception ex)
+                {
+                    // Exception will the "thrown"/Raised when there was a problem
+                    throw new Exception($"SELECT unsuccessful:\n{ex.Message}");
+                }
+                finally
+                {
+                    sqlconnConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                // exception thrown for the whole method or function    
+                throw new Exception($"User(string):\n{ex.Message}");
+            }
+
+
+            sqlconnConnection.Close();
+
+        }
     }
 }
 

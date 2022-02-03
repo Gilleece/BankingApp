@@ -84,28 +84,28 @@
             // 
             this.nameBox.Location = new System.Drawing.Point(336, 97);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(100, 20);
+            this.nameBox.Size = new System.Drawing.Size(129, 20);
             this.nameBox.TabIndex = 4;
             // 
             // accNumBox
             // 
             this.accNumBox.Location = new System.Drawing.Point(336, 132);
             this.accNumBox.Name = "accNumBox";
-            this.accNumBox.Size = new System.Drawing.Size(100, 20);
+            this.accNumBox.Size = new System.Drawing.Size(129, 20);
             this.accNumBox.TabIndex = 5;
             // 
             // ibanBox
             // 
             this.ibanBox.Location = new System.Drawing.Point(336, 175);
             this.ibanBox.Name = "ibanBox";
-            this.ibanBox.Size = new System.Drawing.Size(100, 20);
+            this.ibanBox.Size = new System.Drawing.Size(129, 20);
             this.ibanBox.TabIndex = 6;
             // 
             // eircodeBox
             // 
             this.eircodeBox.Location = new System.Drawing.Point(336, 218);
             this.eircodeBox.Name = "eircodeBox";
-            this.eircodeBox.Size = new System.Drawing.Size(100, 20);
+            this.eircodeBox.Size = new System.Drawing.Size(129, 20);
             this.eircodeBox.TabIndex = 7;
             // 
             // label1
