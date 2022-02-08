@@ -73,6 +73,12 @@
       <DependentUpon>accountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="dbConnector.cs" />
+    <Compile Include="editDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editDetails.Designer.cs">
+      <DependentUpon>editDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="accountDetails.resx">
       <DependentUpon>accountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editDetails.resx">
+      <DependentUpon>editDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

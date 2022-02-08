@@ -32,45 +32,6 @@ namespace BankingApp
             }
         }
 
-        public DataTable FetchMessageDataFromTable() // Original param: string strSenderGuid
-        {
-            // sample of a well formed Method to connect to the DB and perform certain functions
-            try
-            {
-                DataTable dtAccounts = new DataTable();
-                sqlconnConnection.Open();
-                string strQuery = @"SELECT * FROM accounts;";  // example of a Paramaterised SQL statement.
-                SQLiteCommand sqlcomCommand = new SQLiteCommand(strQuery, sqlconnConnection);
-                //sqlcomCommand.Parameters.AddWithValue("@mysenderguid", strSenderGuid); // passing parameters into the SQL command
-                SQLiteDataAdapter sqldatadptAdapter = new SQLiteDataAdapter(sqlcomCommand);  // local SQL data Adaptor
-
-
-                try
-                {
-                    sqldatadptAdapter.Fill(dtAccounts);
-                    return dtAccounts;
-                }
-                catch (Exception ex)
-                {
-                    // Exception will the "thrown"/Raised when there was a problem
-                    throw new Exception($"SELECT unsuccessful:\n{ex.Message}");
-                }
-                finally
-                {
-                    sqlconnConnection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                // exception thrown for the whole method or function    
-                throw new Exception($"User(string):\n{ex.Message}");
-            }
-
-
-            sqlconnConnection.Close();
-
-        }
-
         public bool checkCredentials(string accNum, string pin)
         {
             try
@@ -148,6 +109,41 @@ namespace BankingApp
             catch (Exception ex)
             {
                 // exception thrown for the whole method or function    
+                throw new Exception($"User(string):\n{ex.Message}");
+            }
+
+
+            sqlconnConnection.Close();
+
+        }
+
+        public void updateDetails(string accNum, string name, string eircode, string pin)
+        {
+            try
+            {
+                sqlconnConnection.Open();
+                string strInsert = @"UPDATE accounts SET fullName = @name, eircode = @eircode, pin = @pin WHERE accountNo = @accNum;";
+                SQLiteCommand sqlcomCommand = new SQLiteCommand(strInsert, sqlconnConnection);
+                sqlcomCommand.Parameters.AddWithValue("@accNum", accNum);
+                sqlcomCommand.Parameters.AddWithValue("@name", name);
+                sqlcomCommand.Parameters.AddWithValue("@eircode", eircode);
+                sqlcomCommand.Parameters.AddWithValue("@pin", pin);
+
+                try
+                {
+                    sqlcomCommand.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"UPDATE unsuccessful:\n{ex.Message}");
+                }
+                finally
+                {
+                    sqlconnConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
                 throw new Exception($"User(string):\n{ex.Message}");
             }
 

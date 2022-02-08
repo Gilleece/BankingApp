@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(accountDetails));
             this.nameLabel = new System.Windows.Forms.Label();
             this.accNumLabel = new System.Windows.Forms.Label();
@@ -39,10 +40,10 @@
             this.eircodeBox = new System.Windows.Forms.TextBox();
             this.balanceLabel = new System.Windows.Forms.Label();
             this.balanceBox = new System.Windows.Forms.TextBox();
-            this.editNameBtn = new System.Windows.Forms.Button();
-            this.editEircodeBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.editPinBtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.helpBtn = new System.Windows.Forms.Button();
+            this.mainToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // nameLabel
@@ -94,32 +95,40 @@
             this.nameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameBox.Location = new System.Drawing.Point(362, 503);
             this.nameBox.Name = "nameBox";
+            this.nameBox.ReadOnly = true;
             this.nameBox.Size = new System.Drawing.Size(185, 29);
             this.nameBox.TabIndex = 4;
+            this.mainToolTip.SetToolTip(this.nameBox, "This is your name, did you really need that explained to you?");
             // 
             // accNumBox
             // 
             this.accNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accNumBox.Location = new System.Drawing.Point(362, 544);
             this.accNumBox.Name = "accNumBox";
+            this.accNumBox.ReadOnly = true;
             this.accNumBox.Size = new System.Drawing.Size(185, 29);
             this.accNumBox.TabIndex = 5;
+            this.mainToolTip.SetToolTip(this.accNumBox, "This is your account number, at our bank you really are just a number!");
             // 
             // ibanBox
             // 
             this.ibanBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibanBox.Location = new System.Drawing.Point(362, 587);
             this.ibanBox.Name = "ibanBox";
+            this.ibanBox.ReadOnly = true;
             this.ibanBox.Size = new System.Drawing.Size(185, 29);
             this.ibanBox.TabIndex = 6;
+            this.mainToolTip.SetToolTip(this.ibanBox, "Iban, uban, we all ban! This is your internation banking account number.");
             // 
             // eircodeBox
             // 
             this.eircodeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eircodeBox.Location = new System.Drawing.Point(362, 626);
             this.eircodeBox.Name = "eircodeBox";
+            this.eircodeBox.ReadOnly = true;
             this.eircodeBox.Size = new System.Drawing.Size(185, 29);
             this.eircodeBox.TabIndex = 7;
+            this.mainToolTip.SetToolTip(this.eircodeBox, "This is your Eircode, we didn\'t want to bother with full addresses");
             // 
             // balanceLabel
             // 
@@ -139,52 +148,49 @@
             this.balanceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.balanceBox.Location = new System.Drawing.Point(362, 421);
             this.balanceBox.Name = "balanceBox";
+            this.balanceBox.ReadOnly = true;
             this.balanceBox.Size = new System.Drawing.Size(185, 33);
             this.balanceBox.TabIndex = 9;
-            // 
-            // editNameBtn
-            // 
-            this.editNameBtn.BackColor = System.Drawing.Color.IndianRed;
-            this.editNameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editNameBtn.Location = new System.Drawing.Point(562, 498);
-            this.editNameBtn.Name = "editNameBtn";
-            this.editNameBtn.Size = new System.Drawing.Size(60, 40);
-            this.editNameBtn.TabIndex = 10;
-            this.editNameBtn.Text = "EDIT";
-            this.editNameBtn.UseVisualStyleBackColor = false;
-            // 
-            // editEircodeBtn
-            // 
-            this.editEircodeBtn.BackColor = System.Drawing.Color.IndianRed;
-            this.editEircodeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editEircodeBtn.Location = new System.Drawing.Point(562, 623);
-            this.editEircodeBtn.Name = "editEircodeBtn";
-            this.editEircodeBtn.Size = new System.Drawing.Size(60, 40);
-            this.editEircodeBtn.TabIndex = 11;
-            this.editEircodeBtn.Text = "EDIT";
-            this.editEircodeBtn.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(490, 346);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 40);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "PIN";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mainToolTip.SetToolTip(this.balanceBox, "This is your balance, please don\'t cry");
             // 
             // editPinBtn
             // 
             this.editPinBtn.BackColor = System.Drawing.Color.IndianRed;
             this.editPinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editPinBtn.Location = new System.Drawing.Point(562, 346);
+            this.editPinBtn.Location = new System.Drawing.Point(562, 581);
             this.editPinBtn.Name = "editPinBtn";
-            this.editPinBtn.Size = new System.Drawing.Size(60, 40);
+            this.editPinBtn.Size = new System.Drawing.Size(86, 40);
             this.editPinBtn.TabIndex = 13;
-            this.editPinBtn.Text = "EDIT";
+            this.editPinBtn.Text = "EDIT DETAILS";
+            this.mainToolTip.SetToolTip(this.editPinBtn, "Click here to edit your details");
             this.editPinBtn.UseVisualStyleBackColor = false;
+            this.editPinBtn.Click += new System.EventHandler(this.editPinBtn_Click);
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.IndianRed;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Location = new System.Drawing.Point(562, 623);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(86, 40);
+            this.logoutBtn.TabIndex = 14;
+            this.logoutBtn.Text = "LOG OUT";
+            this.mainToolTip.SetToolTip(this.logoutBtn, "Click here to log out");
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // helpBtn
+            // 
+            this.helpBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpBtn.Location = new System.Drawing.Point(562, 338);
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.Size = new System.Drawing.Size(86, 40);
+            this.helpBtn.TabIndex = 15;
+            this.helpBtn.Text = "CLICK HERE FOR HELP";
+            this.mainToolTip.SetToolTip(this.helpBtn, "Read the user guide");
+            this.helpBtn.UseVisualStyleBackColor = false;
+            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
             // 
             // accountDetails
             // 
@@ -192,10 +198,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(959, 994);
+            this.Controls.Add(this.helpBtn);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.editPinBtn);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.editEircodeBtn);
-            this.Controls.Add(this.editNameBtn);
             this.Controls.Add(this.balanceBox);
             this.Controls.Add(this.balanceLabel);
             this.Controls.Add(this.eircodeBox);
@@ -226,9 +231,9 @@
         private System.Windows.Forms.TextBox eircodeBox;
         private System.Windows.Forms.Label balanceLabel;
         private System.Windows.Forms.TextBox balanceBox;
-        private System.Windows.Forms.Button editNameBtn;
-        private System.Windows.Forms.Button editEircodeBtn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button editPinBtn;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button helpBtn;
+        private System.Windows.Forms.ToolTip mainToolTip;
     }
 }

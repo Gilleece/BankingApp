@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.accountLabel = new System.Windows.Forms.Label();
             this.pinLabel = new System.Windows.Forms.Label();
             this.accountInput = new System.Windows.Forms.TextBox();
             this.pinInput = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.helpBtn = new System.Windows.Forms.Button();
+            this.mainToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // accountLabel
@@ -67,6 +70,7 @@
             this.accountInput.Name = "accountInput";
             this.accountInput.Size = new System.Drawing.Size(150, 38);
             this.accountInput.TabIndex = 3;
+            this.mainToolTip.SetToolTip(this.accountInput, "Enter your account number here");
             // 
             // pinInput
             // 
@@ -76,6 +80,7 @@
             this.pinInput.Size = new System.Drawing.Size(150, 38);
             this.pinInput.TabIndex = 4;
             this.pinInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mainToolTip.SetToolTip(this.pinInput, "Enter your PIN here");
             // 
             // loginButton
             // 
@@ -88,8 +93,22 @@
             this.loginButton.Size = new System.Drawing.Size(177, 55);
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Log In";
+            this.mainToolTip.SetToolTip(this.loginButton, "Click to log in");
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // helpBtn
+            // 
+            this.helpBtn.BackColor = System.Drawing.Color.SkyBlue;
+            this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpBtn.Location = new System.Drawing.Point(562, 338);
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.Size = new System.Drawing.Size(86, 40);
+            this.helpBtn.TabIndex = 16;
+            this.helpBtn.Text = "CLICK HERE FOR HELP";
+            this.mainToolTip.SetToolTip(this.helpBtn, "Read the user guide");
+            this.helpBtn.UseVisualStyleBackColor = false;
+            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
             // 
             // Login
             // 
@@ -97,6 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(957, 991);
+            this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.pinInput);
             this.Controls.Add(this.accountInput);
@@ -115,6 +135,8 @@
         private System.Windows.Forms.TextBox accountInput;
         private System.Windows.Forms.TextBox pinInput;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button helpBtn;
+        private System.Windows.Forms.ToolTip mainToolTip;
     }
 }
 
