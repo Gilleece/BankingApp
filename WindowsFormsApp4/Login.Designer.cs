@@ -123,7 +123,7 @@
             this.Controls.Add(this.pinLabel);
             this.Controls.Add(this.accountLabel);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Welcome! - Please Log In";
             this.ResumeLayout(false);
             this.PerformLayout();
 

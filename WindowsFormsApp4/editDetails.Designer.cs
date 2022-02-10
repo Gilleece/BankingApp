@@ -158,7 +158,7 @@
             this.Controls.Add(this.pinLabel);
             this.Controls.Add(this.nameLabel);
             this.Name = "editDetails";
-            this.Text = "Form1";
+            this.Text = "Edit Details";
             this.ResumeLayout(false);
             this.PerformLayout();
 

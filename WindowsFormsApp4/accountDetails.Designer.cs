@@ -212,7 +212,7 @@
             this.Controls.Add(this.accNumLabel);
             this.Controls.Add(this.nameLabel);
             this.Name = "accountDetails";
-            this.Text = "acccountDetails";
+            this.Text = "Acccount Details";
             this.Load += new System.EventHandler(this.acccountDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

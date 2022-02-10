@@ -16,13 +16,13 @@ namespace BankingApp
     {
         string currentAcc;
 
-        public dbConnector accountsDbConnection = new dbConnector(@"accounts.db");
+        public dbConnector myBankDbconnector = new dbConnector(@"accounts.db");
 
         public editDetails(string accNum)
         {
             InitializeComponent();
             currentAcc = accNum;
-            DataTable accountDetailsDT = accountsDbConnection.getAccountDetails(accNum);
+            DataTable accountDetailsDT = myBankDbconnector.getAccountDetails(accNum);
             nameBox.Text = accountDetailsDT.Rows[0][2].ToString();
             eircodeBox.Text = accountDetailsDT.Rows[0][4].ToString();
             pinBox.Text = accountDetailsDT.Rows[0][5].ToString();
@@ -57,7 +57,7 @@ namespace BankingApp
             }
             else
             {
-                accountsDbConnection.updateDetails(currentAcc, nameBox.Text, eircodeBox.Text, pinBox.Text);
+                myBankDbconnector.updateDetails(currentAcc, nameBox.Text, eircodeBox.Text, pinBox.Text);
                 MessageBox.Show("Details updated.",
                                          "Update confirmed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 accountDetails accountDetails = new accountDetails(currentAcc);
